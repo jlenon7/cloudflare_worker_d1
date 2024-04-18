@@ -11,12 +11,6 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-export interface Env {
-	// If you set another name in wrangler.toml as the value for 'binding',
-	// replace "DB" with the variable name you defined.
-	DB: D1Database;
-}
-
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		const { pathname } = new URL(request.url);
